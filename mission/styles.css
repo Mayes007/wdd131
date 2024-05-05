@@ -45,3 +45,18 @@ p {
     text-align: left;
 }
 
+
+
+body.dark {
+    background-color: #333;
+    color: white; 
+}
+
+header h2 {
+    color: #006EB6; 
+}
+
+
+body.dark header h2 {
+    color: #9FC3D5; 
+}
