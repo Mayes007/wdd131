@@ -47,3 +47,6 @@ img {
     background-color: #333;
     color: white;
 }
+.dark h2 {
+    color: #4e94c1; /* Use a lighter blue color for better contrast */
+}
