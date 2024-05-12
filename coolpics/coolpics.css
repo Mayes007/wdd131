@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
-    --primary-color: #48839c;
-    --secondary-color: #357878;
-    --accent-color: #5c080f;
-    --text-dark: #080808;
-    --text-light: #faf6f6;
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
     --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: 'Mooli', sans-serif;
 }
@@ -14,7 +14,6 @@ body {
     font-family: var(--primary-font);
     font-size: 1.2em;
     color: var(--text-dark);
-    background-color: var(--text-light);
 }
 
 a:link,
@@ -23,42 +22,22 @@ a:visited {
 }
 
 header {
-  background-color: var(--primary-color);
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  z-index: 1000; /* Ensure header stays on top */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-  margin: 0;
-  font-family: var(--secondary-font);
-  font-size: 2em;
-  color: var(--text-light);
-  padding: 20px 0;
-}
-
-
-@media screen and (max-width: 700px) {
-    header h1 {
-        font-size: 1.5em;
-        padding: 10px 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    header h1 {
-        font-size: 1.2em;
-        padding: 5px 0;
-    }
-}
-
-button#menu-toggle {
-    display: none; /* Hide initially, will be shown with JavaScript */
+    margin: 0;
+    font-family: var(--secondary-font);
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -67,25 +46,18 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li:last-child {
+    margin-right: 0;
+}
+
 main {
     padding: 20px;
 }
 
-footer {
-  text-align: center;
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 20px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure footer stays on top */
-}
-
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .gallery figure {
@@ -93,23 +65,14 @@ footer {
 }
 
 .gallery img {
-    width: 100%;
+    max-width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-@media screen and (min-width: 700px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    #menu-toggle {
-        display: none;
-    }
-}
-.main-content {
-  margin-top: 80px; /* Adjust this value to leave space for the header */
-  margin-bottom: 80px; /* Adjust this value to leave space for the footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
 }

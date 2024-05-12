@@ -1,14 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav');
+// JavaScript functionality can be added here as needed
+// For example, toggling the menu button to show/hide navigation links
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.querySelector('nav');
 
-    // Function to toggle the visibility of the navigation menu
-    function toggleMenu() {
-        nav.classList.toggle('show');
-    }
-
-    // Event listener for the menu toggle button
-    menuToggle.addEventListener('click', function() {
-        toggleMenu();
-    });
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
 });
