@@ -22,12 +22,16 @@ a:visited {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
@@ -71,8 +75,12 @@ main {
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    text-align: center;
-    padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 10px;
 }
