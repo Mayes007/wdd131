@@ -32,7 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  z-index: 1000; /* Ensures the header is above other content */
 
 header h1 {
     margin: 0;
@@ -73,7 +73,6 @@ main {
     height: 250px;
     object-fit: cover;
 }
-
 footer {
   position: fixed;
   bottom: 0;
@@ -83,4 +82,19 @@ footer {
   color: var(--text-light);
   text-align: center;
   padding: 10px;
+}
+/* Media query for screens wider than 700px */
+@media screen and (min-width: 700px) {
+  header, footer {
+      width: 700px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+/* Media query for screens wider than 1000px */
+@media screen and (min-width: 1000px) {
+  header, footer {
+      width: 1000px;
+  }
 }
