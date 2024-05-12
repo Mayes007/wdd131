@@ -109,3 +109,7 @@ footer {
         display: none;
     }
 }
+.main-content {
+  margin-top: 80px; /* Adjust this value to leave space for the header */
+  margin-bottom: 80px; /* Adjust this value to leave space for the footer */
+}
