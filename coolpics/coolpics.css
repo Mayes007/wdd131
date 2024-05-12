@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
-    --primary-color: #52489c;
-    --secondary-color: #59c3c3;
-    --accent-color: #f45b69;
-    --text-dark: #333;
-    --text-light: #ebebeb;
+    --primary-color: #488a9c;
+    --secondary-color: #c159c3;
+    --accent-color: #e31728;
+    --text-dark: #131313;
+    --text-light: #fcf2f2;
     --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: 'Mooli', sans-serif;
 }
@@ -71,4 +71,21 @@ img {
     header button {
         display: none;
     }
+}
+/* Remove default button styles */
+button#menu {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+  font-family: inherit; /* Use the same font as other text */
+  font-size: inherit; /* Use the same font size as other text */
+  color: inherit; /* Use the same color as other text */
+  text-decoration: underline; /* Underline the text to indicate it's a link */
+}
+
+/* Optionally, you can add hover styles */
+button#menu:hover {
+  color: var(--accent-color); /* Change color on hover */
 }
