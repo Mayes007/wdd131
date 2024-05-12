@@ -69,6 +69,6 @@ img {
         grid-template-columns: repeat(3, 1fr);
     }
     header button {
-        display: none; /* Hides the menu button on wider screens */
+        display: none;
     }
 }
