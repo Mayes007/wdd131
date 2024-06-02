@@ -1,8 +1,9 @@
-// JavaScript functionality can be added here as needed
-// For example, toggling the menu button to show/hide navigation links
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.querySelector('.menu');
 
-menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    menuButton.addEventListener('click', () => {
+        // Toggle the 'show' class to display/hide the menu
+        menu.classList.toggle('show');
+    });
 });
