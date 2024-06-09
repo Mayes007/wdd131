@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+}
+
+form {
+    display: grid;
+    gap: 11px;
+    grid-template-areas:
+        "front"
+        "back"
+        "button";
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 22px;
+    position: relative;
+}
+
+.card-front {
+    grid-area: front;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 0px;
+    align-items: center;
+}
+
+.card-back {
+    grid-area: back;
+    z-index: 1;
+    margin-top: -50px; /* Adjust to overlap the front card */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: right;
+}
+
+.total {
+    grid-column: 10 span 3;
+    margin: 0;
+    font-size: 18px; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 55px;
+   
+}
+
+.card-image {
+    grid-column: 10 / span 3;
+    height: 55px;
+    justify-self: end;
+}
+
+label {
+    grid-column: span 12;
+    font-size: 12px;
+    margin-top: 10px;
+   text-align: right;
+
+
+ 
+}
+input {
+    grid-column: span 12;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.expiry {
+    grid-column: span 12;
+    display: flex;
+    gap: 10px;
+}
+
+.expiry input {
+    width: 50%;
+}
+
+.stripe {
+    grid-column:  span 12;
+    background-color: #333;
+    height: 40px;
+    margin-bottom: 1px;
+   
+}
+
+#cvc {
+    grid-column: 10/ span 3
+    
+    
+    
+    
+   
+}
+
+button {
+    grid-area: button;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: end;
+   
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
