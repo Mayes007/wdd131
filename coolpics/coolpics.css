@@ -29,8 +29,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center; /* Center the text horizontally */
-    margin-top: 20px; /* Add some space between the heading and the gallery */
+    text-align: center;
+    margin-top: 20px;
 }
 
 h1 {
@@ -58,11 +58,11 @@ h1 {
     text-decoration: none;
     padding: 10px;
     display: block;
-    border-bottom: 1px solid transparent; /* Initially transparent */
+    border-bottom: 1px solid transparent;
 }
 
 .menu a:hover {
-    border-bottom-color: var(--text-light); /* Change color on hover */
+    border-bottom-color: var(--text-light);
 }
 
 .menu.show {
@@ -75,8 +75,8 @@ main {
 }
 
 .section-heading {
-    text-align: center; /* Center the text horizontally */
-    margin-top: 20px; /* Add some space between the heading and the gallery */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .gallery {
@@ -126,6 +126,62 @@ footer {
     }
 }
 
+.hide {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .menu-button {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .menu.show {
+        display: flex;
+    }
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.viewer img {
+    max-height: 100%;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* Large screen adjustments */
+@media (min-width: 1000px) {
+    .viewer {
+        padding: 20px;
+    }
+
+    .viewer img {
+        max-width: 90%;
+        max-height: 90%;
+    }
 @media screen and (min-width: 1000px) {
     .header-content {
         flex-direction: row;
@@ -149,12 +205,12 @@ footer {
     }
 
     .gallery img {
-        height: 350px; /* Increase the height for larger screens */
+        height: 350px;
     }
 }
 
 @media screen and (max-width: 999px) {
     .menu {
-        display: flex; /* Hide the links on small screens */
+        display: flex;
     }
 }
