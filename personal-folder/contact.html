@@ -3,48 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Obi-Wan and Anakin: A Jedi Legacy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .background-image {
+            width: 100%;
+            height: 200px;
+            background: url('background.jpg') no-repeat center center/cover;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media label {
+            display: inline-block;
+            width: 100px;
+        }
+        .social-media input[type="text"] {
+            width: calc(100% - 110px);
+        }
+    </style>
 </head>
 <body>
-    <div class="background-image"></div>
-    <header>
-        <h1>Contact Us</h1>
-        <h2>Get in Touch with Us</h2>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="journey.html">Journey</a></li>
-            <li><a href="character-analysis.html">Character Analysis</a></li>
-            <li><a href="quotes.html">Quotes</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="contact">
-        <h2>Contact Form</h2>
-        <form action="submit_form.php" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    <div class="container">
+        <h1>Contact Information</h1>
+        <div class="background-image"></div>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="Samantha Mayes" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" value="SamanthaMayes@gmail.com" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" value="555-555-5555" >
+            
+            <div class="social-media">
+                <h2>Social Media</h2>
+                
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" id="linkedin" name="linkedin" value="SamanthaMayers">
+                
+                <label for="twitter">Twitter</label>
+                <input type="text" id="twitter" name="twitter" value="@MayersSamantha">
+                
+                <label for="facebook">Facebook</label>
+                <input type="text" id="facebook" name="facebook" value="SamanthaMayers@gmail.com">
+                
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" value="MayersIG">
+                
+                <label for="snapchat">Snapchat</label>
+                <input type="text" id="snapchat" name="snapchat" value="Smayers02">
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
+            <input type="submit" value="Submit">
         </form>
-    </section>
-    <script src="main.js"></script>
+    </div>
 </body>
 </html>
