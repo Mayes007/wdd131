@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: #0e859a;
         }
         .container {
             width: 80%;
@@ -28,20 +28,19 @@
             height: 200px;
             background: url('background.jpg') no-repeat center center/cover;
         }
-        form {
+        .contact-info {
             margin-top: 20px;
         }
-        label {
+        .contact-info label {
             display: block;
             margin: 10px 0 5px;
             color: #333;
+            font-weight: bold;
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
-            width: 100%;
+        .contact-info p {
+            margin: 0 0 20px;
             padding: 10px;
-            margin-bottom: 20px;
+            background: #f9f9f9;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
@@ -49,11 +48,17 @@
             margin-top: 20px;
         }
         .social-media label {
-            display: inline-block;
-            width: 100px;
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+            font-weight: bold;
         }
-        .social-media input[type="text"] {
-            width: calc(100% - 110px);
+        .social-media p {
+            margin: 0 0 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -61,36 +66,34 @@
     <div class="container">
         <h1>Contact Information</h1>
         <div class="background-image"></div>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="Samantha Mayes" required>
+        <div class="contact-info">
+            <label>Name</label>
+            <p>Samantha Mayes</p>
             
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" value="SamanthaMayes@gmail.com" required>
+            <label>Email Address</label>
+            <p>SamanthaMayes@gmail.com</p>
             
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" value="555-555-5555" >
+            <label>Phone Number</label>
+            <p>208-403-8192</p>
+        </div>
+        <div class="social-media">
+            <h2>Social Media</h2>
             
-            <div class="social-media">
-                <h2>Social Media</h2>
-                
-                <label for="linkedin">LinkedIn</label>
-                <input type="text" id="linkedin" name="linkedin" value="SamanthaMayers">
-                
-                <label for="twitter">Twitter</label>
-                <input type="text" id="twitter" name="twitter" value="@MayersSamantha">
-                
-                <label for="facebook">Facebook</label>
-                <input type="text" id="facebook" name="facebook" value="SamanthaMayers@gmail.com">
-                
-                <label for="instagram">Instagram</label>
-                <input type="text" id="instagram" name="instagram" value="MayersIG">
-                
-                <label for="snapchat">Snapchat</label>
-                <input type="text" id="snapchat" name="snapchat" value="Smayers02">
-            </div>
-            <input type="submit" value="Submit">
-        </form>
+            <label>LinkedIn</label>
+            <p>Samantha Mayes</p>
+            
+            <label>Twitter</label>
+            <p>@MayesSamantha</p>
+            
+            <label>Facebook</label>
+            <p>SamanthaMayes@gmail.com</p>
+            
+            <label>Instagram</label>
+            <p>Mayes6565</p>
+            
+            <label>Snapchat</label>
+            <p>Smayes02</p>
+        </div>
     </div>
 </body>
 </html>
