@@ -2,175 +2,121 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 header {
-    display: center;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
+    background-color: #AB1822;
+    color: #000000;
+    padding: 10px 0;
 }
 
 .header-content {
-    text-align:center;
-    background-color: rgba(46, 162, 178, 0.5);
-    padding: 10px;
-    border-radius: 1%
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-content h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 .header-logo {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    width: 150px; /* Adjust the size as needed */
-    height: 150px;
-
+    max-height: 100px;
 }
 
 nav {
-    text-align: left;
-    background-color: rgba(19, 156, 174, 0.7);
-    padding: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #000000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration:none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
-section {
+nav ul li a:hover {
+    background-color: #000000;
+}
+
+#main-content, #journey, #quotes, #character-analysis-content {
     padding: 20px;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 0px;
-    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    text-align:left;
 }
 
 .column {
-    flex: 1 1 45%; /* Allow columns to resize and wrap */
-    margin: 10px;
-    box-sizing: border-box;
-    background-color: rgba(36, 189, 219, 0.8);
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer button {
+    background-color: #04e2ff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #1d728b;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
-table th, table td {
+table, th, td {
     border: 1px solid #000000;
+}
+
+th, td {
     padding: 8px;
     text-align: left;
 }
 
-table th {
-    background-color: #8ee7eb;
-}
-
-h3 {
-    margin-top: 0;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 30px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(43, 174, 210, 0.7);
-    color: rgb(34, 127, 152);
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-    header, nav, section, footer {
-        margin: 0;
-        padding: 15px;
-        text-align: left;
-        
-    }
-
-    .column {
-        flex: 1 1 100%; /* Adjust columns to be full width on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    header, nav, section, footer {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .column {
-        flex: 1 1 100%; /* Make columns full width on small screens */
-    }
-
-    .header-content {
-        background-size: contain; /* Adjust background size for small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    header, nav, section, footer {
-        margin: 0;
-        padding: 5px;
-        text-align: center;
-    }
-
-    h1, h2 {
-        font-size: 1.5em; /* Adjust font size for small screens */
-    }
-
-    button {
-        width: 100%; /* Make button full width on small screens */
-        padding: 10px;
-    }
-
-    .header-content {
-        background-size: cover; /* Ensure the image covers the entire background */
-    }
- 
+th {
+    background-color: #31ccf3;
 }
