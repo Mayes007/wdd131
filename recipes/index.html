@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A collection of delicious recipes">
-    <meta name="author" content="Samantha Mayes">
-    <meta property="og:title" content="Recipe Book">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="A collection of delicious recipes">
-    <meta property="og:image" content="URL to an image">
-    <meta property="og:url" content="URL of the page">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Recipe Book - A collection of delicious recipes">
+    <meta name="author" content="Your Name">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipes.css">
-    <link rel="icon" href="path/to/favicon.ico">
 </head>
 <body>
     <header>
         <img src="images/recipe-book.png" alt="Recipe Book Logo">
-        <h1>RecipeBook</h1>
+        <h1>Recipe Book</h1>
     </header>
     <main>
-        <form id="search-form">
-            <label for="search">Find a Recipe!</label>
+        <form>
+            <label for="search">Find a recipe:</label>
             <input type="text" id="search" name="search">
             <button type="submit">Search</button>
         </form>
         <section id="recipes">
-            <!-- Recipe content will be dynamically added here -->
+            <article class="recipe">
+                <img src="images/apple-crisp.jpg" alt="Apple Crisp">
+                <div class="recipe-info">
+                    <span class="tag">dessert</span>
+                    <h2>Apple Crisp</h2>
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                    <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
-        <p><small>&copy;2023 Recipe Book</small></p>
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        <p>©2023</p>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
         </div>
+        <p><a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a></p>
     </footer>
-    <script src="main.js" type="module"></script>
+    <script src="main.js"></script>
 </body>
 </html>
