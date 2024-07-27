@@ -209,10 +209,16 @@ footer {
     .gallery img {
         height: 350px;
     }
+    .hide{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 999px) {
     .menu {
         display: flex;
+    }
+    .hide{
+        display: none;
     }
 }
