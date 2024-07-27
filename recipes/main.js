@@ -73,5 +73,3 @@ function searchHandler(e) {
 }
 
 document.getElementById('search-form').addEventListener('submit', searchHandler);
-
-
