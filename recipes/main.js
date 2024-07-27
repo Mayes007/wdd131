@@ -95,4 +95,3 @@ function recipeTemplate(recipe) {
     </figure>`;
 }
 
-
