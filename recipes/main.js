@@ -1,9 +1,9 @@
 import recipes from './recipes.mjs';
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
     const recipeList = document.getElementById('recipe-list');
-
 
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const results = recipes.filter(recipe => recipe.name.toLowerCase().includes(query) || recipe.description.toLowerCase().includes(query));
         displayRecipes(results);
     });
-
 
     function displayRecipes(recipes) {
         recipeList.innerHTML = ''; // Clear previous results
@@ -38,60 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // Initial display of all recipes
     displayRecipes(recipes);
 });
-
-
-import recipes from './recipes.mjs';
-
-
-function getRandomNumber(max) {
-    return Math.floor(Math.random() * max);
-}
-
-
-function getRandomRecipe(recipes) {
-    const randomIndex = getRandomNumber(recipes.length);
-    return recipes[randomIndex];
-}
-
-
-function tagsTemplate(tags) {
-    return tags.map(tag => `<li>${tag}</li>`).join('');
-}
-
-
-function ratingTemplate(rating) {
-    let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
-    for (let i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            html += '<span aria-hidden="true" class="icon-star">⭐</span>';
-        } else {
-            html += '<span aria-hidden="true" class="icon-star-empty">☆</span>';
-        }
-    }
-    html += '</span>';
-    return html;
-}
-
-
-function recipeTemplate(recipe) {
-    return `<figure class="recipe">
-        <img src="${recipe.image}" alt="image of ${recipe.name}" />
-        <figcaption>
-            <ul class="recipe__tags">
-                ${tagsTemplate(recipe.tags)}
-            </ul>
-            <h2><a href="#">${recipe.name}</a></h2>
-            <p class="recipe__ratings">
-                ${ratingTemplate(recipe.rating)}
-            </p>
-            <p class="recipe__description">
-                ${recipe.description}
-            </p>
-        </figcaption>
-    </figure>`;
-}
-
