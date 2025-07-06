@@ -11,5 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const title = project.querySelector("h3").textContent.toLowerCase();
       const description = project.querySelector("p").textContent.toLowerCase();
 
-      const isVisible = title.includes(term) || description.includes(term);
-      project.style.display = isVisible ?
+            const isVisible = title.includes(term) || description.includes(term);
+            project.style.display = isVisible ? "" : "none";
+          });
+        });
+      });
